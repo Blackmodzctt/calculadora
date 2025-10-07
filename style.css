@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Heebo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    /*corpo da página, onde alterei as cores e alterei a posição da calculadora*/
+    background: #451366;
+    background: linear-gradient(90deg, rgba(69, 19, 102, 1) 0%, rgba(137, 126, 224, 1) 50%, rgba(57, 3, 71, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/*alterei a cor do fundo da calculadora, tamanha e etc.*/
+.calculadora {
+    background-color: rgb(27, 27, 27);
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+    width: 320px;
+    display: flex; /*ativa a flexbox na calculadora*/ 
+    flex-direction: column; /*muda a direção da coluna*/
+    gap: 20px; /*coloca espaçamento entre os itens*/ 
+}
+
+/*alterando o fundo e tamanho da calculadora*/
+#tela {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5em;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #cbc6c6;
+    color: black;
+    text-align: right;
+    box-shadow: inset rgba(0, 0, 0, 0.566);
+}
+
+/*deixei os botões na mesma linha e transformei em coluna*/
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*deixei na mesma linha*/
+.linhabotoes {
+    display: flex;
+    gap: 15px;
+}
+
+/*alterando a cor dos botões e tamanaho deles*/
+button {
+    flex-grow: 1;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    color: #040220;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/*animação do botão*/
+button:hover{
+    background-color: rgb(181, 181, 181);
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: scale(0.97); /*É o que diminui o botão quando clica*/
+    background-color: lightgreen;
+}
+
+/*mudei a cor dos botões de sinais*/
+.operador {
+    background-color: rgb(79, 146, 255);
+    color: white;
+}
+
+/*mudei a cor da animação*/
+.operador:hover {
+    background-color: rgb(20, 110, 255);;
+}
+
+/*mudei a cor do botão de igual*/
+.botao-igual {
+    background-color: #661d97;
+    color: white;
+}
+
+/*mudei a cor da animação do igual*/
+.botao-igual:hover {
+    background-color: #451366;
+}
+
+/*mudei a cor do botão C*/
+.botao-limpar {
+    background-color: rgb(132, 32, 55);
+}
+
+/*mudei a cor da animação*/
+.botao-limpar:hover {
+    background-color: rgb(85, 20, 35);
+}
+
+.botao-zero {
+    flex: 2; /*ele cresceu para ocupar o espaço de 2 botões*/
+} 
