@@ -39,9 +39,19 @@ document.addEventListener("keydown", function(evento) {
 const tecla = evento.key; //Pega o valor da tecla pressionada (ex.: "1", "+", "enter", "backspace")
 
 if("0123456789+-*/.".includes(tecla)) {
-    adicionarValor(tecla)
-if(tecla === "Enter") {
-    calcularResultado()
+    adicionarValor(tecla);
 }
+
+if(tecla === "Enter" || tecla === "=") {
+    calcularResultado();
 }
-} 
+
+if (tecla === "Backspace") {
+    apagarUltimo();
+}
+
+if (tecla === "Escape") {
+    limparTela();
+}
+
+})
